@@ -8,22 +8,17 @@ var playerInfo = {
 var enemyInfo = [
     {
     name: "Roberto",
-    attack: 12
+    attack: randomNumber(10, 14)
     },
     {
         name: "Amy Android",
-        attack: 13
+        attack: randomNumber(10, 14)
     },
     {
         name: "Robo Trumble",
-        attack: 14
+        attack: randomNumber(10,14)
     }
 ];
-
-console.log(enemyNames);
-console.log(enemyNames.length);
-console.log(enemyNames[0]);
-console.log(enemyNames[2]);
 
 //wrap the game logic in a startGame() fucntion
 //when the player is defeated or there are no more enemies, call an endGame() function that:
@@ -43,7 +38,6 @@ console.log(enemyNames[2]);
 
 
 var fight = function(enemy) {
-    console.log(enemy);
     while (playerInfo.health > 0 && enemy.health > 0) {
 
     var promptFight = window.prompt(" Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
@@ -95,8 +89,8 @@ var startGame = function() {
         if (playerInfo.health > 0) {
             window.alert( "Welcome to Robot Gladiators! Round " + (i + 1));
             var pickedEnemyObj = enemyInfo[i];
-            
-            var pickedEnemyObj.health = randomNumber(40, 60);
+
+            pickedEnemyObj.health = randomNumber(40, 60);
 
             enemy.health = randomNumber(40,60);
 
@@ -129,7 +123,7 @@ var endGame = function() {
             startGame();
         }
         else {
-            window.alert( "Thank you for playing Robot Gladiators! Come back soon" );
+            window.alert( "Thank you for playing Robot Gladiators! Come back soon." );
         }
 };
 
@@ -159,8 +153,8 @@ var shop = function() {
                 case "upgrade":
                     case "UPGRADE":
                     if (playerInfo.money >= 7) {
-                    window.alert(" Uograding player's attack by 6 for 7 dollars." );
-                    playerInfo.attack = playerInfo.attack +6;
+                    window.alert(" Upgrading player's attack by 6 for 7 dollars." );
+                    playerInfo.attack = playerInfo.attack + 6;
                     playerInfo.money = playerInfo.money - 7;
                     }
                     else {
