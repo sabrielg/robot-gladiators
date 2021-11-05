@@ -1,24 +1,3 @@
-var playerInfo = {
-    name: window.prompt("What is your robot's name?"),
-    health: 100,
-    attack: 10,
-    money: 10
-};
-
-var enemyInfo = [
-    {
-    name: "Roberto",
-    attack: randomNumber(10, 14)
-    },
-    {
-        name: "Amy Android",
-        attack: randomNumber(10, 14)
-    },
-    {
-        name: "Robo Trumble",
-        attack: randomNumber(10,14)
-    }
-];
 
 //wrap the game logic in a startGame() fucntion
 //when the player is defeated or there are no more enemies, call an endGame() function that:
@@ -171,6 +150,28 @@ var shop = function() {
                         break;
     }
 };
+
+var playerInfo = {
+    name: window.prompt("What is your robot's name?"),
+    health: 100,
+    attack: 10,
+    money: 10
+};
+
+var enemyInfo = [
+    {
+    name: "Roberto",
+    attack: randomNumber(10, 14)
+    },
+    {
+        name: "Amy Android",
+        attack: randomNumber(10, 14)
+    },
+    {
+        name: "Robo Trumble",
+        attack: randomNumber(10,14)
+    }
+];
 
 startGame();
 //Game States
