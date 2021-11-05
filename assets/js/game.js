@@ -85,6 +85,9 @@ var startGame = function() {
 
             fight(pickedEnemyName);
         }
+        if (playerHealth > 0 && i < enemyNames.length - 1) {
+            shop();
+        }
         else {
             window.alert( " You have lost your robot in battle! Game Over!" );
             break;
@@ -108,6 +111,9 @@ var endGame = function() {
         }
 };
 }
+var shop = function() {
+    console.log(" entered the shop");
+};
 startGame();
 //Game States
 
